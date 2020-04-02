@@ -46,8 +46,8 @@ class Person extends SuperModel
     public $gender;
  
     public static $definition = [
-        'table' => 'a',
-        'primary' => 'id',
+        'table' => 'person',
+        'primary' => 'id_person',
         'fields' => [
             'name' => [
                 'type' => self::TYPE_STRING,
