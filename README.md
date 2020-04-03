@@ -51,7 +51,7 @@ class Person extends SuperModel
         'fields' => [
             'name' => [
                 'type' => self::TYPE_STRING,
-                'validate' => 'Person::isString'
+                'validate' => 'isString'
             ],
             'age' => [
                 'type' => self::TYPE_INT,
