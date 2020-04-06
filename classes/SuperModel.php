@@ -104,11 +104,13 @@ abstract class SuperModel extends ObjectModel
                     if (!call_user_func(['Validate', $data['validate']], $value, $ps_allow_html_iframe)) {
                         $is_valid = false;
                     }
+                } else {
+                    if (!call_user_func($callable, $value)) {
+                        $is_valid = false;
+                    }          
                 }
 
-                if (!call_user_func($callable, $value)) {
-                    $is_valid = false;
-                }
+
 
                 if (!$is_valid) {
                     if ($human_errors) {
